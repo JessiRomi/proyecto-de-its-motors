@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Electro</title>
+    <link rel="stylesheet" href="css/estilos.css"> <!--es la que nos va a vincular con la carpeta de estilos-->
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.0-web/css/all.min.css"><!--para darle el estilo a los iconos-->
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.0-web/css/fontawesome.min.css">
+</head>
+<body>
+    <!--Para comentar-->
+    <header>
+    <nav> <!--nav es para hacer una barra de navegacion-->
+        <a href="index.html">INICIO</a>  <!--es para crear hipervinculo(boton)-->
+        <a href="nosotros.html">NOSOTROS</a>
+        <a href="contacto.html">CONTACTO</a>
+    </nav>
+    </header>
+    <main>
+    <h1>Tienda Electro</h1>
+    <h2>Acerca de la tienda</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+       Excepturi ipsum optio dolorum necessitatibus, inventore, at reiciendis possimus explicabo
+       veniam quam eos mollitia. Autem iste quisquam magni pariatur quod architecto quos.</p>
+    <h2 id="catalogo">Catalogo</h2>
+    <div class="producto"> <!--es para modificar como se va a ver el producto-->
+        <h3>Licuadora Peabody</h3>
+        <img src="imagenes/licuadora.jpg" alt="Licuadora Peabody">
+        <ul> <!--es una lista sin orden-->
+            <li><span>Precio:</span> $45000</li>
+            <li><span>Modelo:</span> KLAP</li>
+            <li><span>Marca:</span> Peabody</li>
+        </ul>
+    </div><!--separa un grupo de elementos-->
+    <div class="producto">
+        <h3>Plancha Oster</h3>
+        <!--<img src="imagenes/plancha.jpg" alt="Plancha Oster" height="200" width="200">-->
+        <img src="imagenes/plancha.jpg" alt="Plancha Oster">
+        <ul>
+            <li><span>Precio:</span> $15000</li><!--la etiqueta span modifica solo la linea-->
+            <li><span>Modelo:</span>UXLS</li>
+            <li><span>Marca:</span> Oster</li>
+        </ul>
+    </div>
+    <div class="producto">
+        <h3>Tostadora Phillips</h3>
+        <!--<img src="imagenes/tostadora.jpg" alt="Tostadora Philips" height="200" width="250">-->
+        <img src="imagenes/tostadora.jpg" alt="Tostadora Philips">
+        <ul>
+            <li><span>Precio:</span> $25000</li>
+            <li><span>Modelo:</span> PEOQ</li>
+            <li><span>Marca:</span> Phillips</li>
+        </ul>
+    </div>
+    <div class="bloque-video">
+        <h2>Video promocional</h2>
+        <iframe width="713" height="401" src="https://www.youtube.com/embed/v6wDu-6t6Gk" 
+        title="KHEA, Tiago PZK - PARA AMARTE A TI (Official Video)" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+        web-share" allowfullscreen></iframe>
+        <!--para insertar un video se copia el codigo de insercion desde youtube, con el boton derecho-->
+    </div>
+    <!--
+    <a href="#catalogo" class="link">IR AL CATALOGO</a>  esto es para armar botones abajo del todo
+    <a href="mailto:la23euge77@gmail.com">Eugenia Mora correo</a>
+    <a href="tel:2995111445">COMUNICATE</a>
+    -->
+    </main>
+  
+    <footer> <!--se buscan los iconos en fontawesome-->
+        <div>
+            <a href="http://wwww.youtube.com" target="_blank" title="Hola"><i class="fa-sharp fa-solid fa-house"></i></a> 
+            <!--el _blank indica que la pagina se va a abrir en una pestaña nueva-->
+            <a href="https://wa.me/542995111445" target="_blank" title="WA"><i class="fa-sharp fa-solid fa-comment"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/*Para comentar se usa esto*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+body{
+    
+    /*background-color: rgb(255, 115, 0);*/
+    font-family: 'Quicksand';
+   /* background-image: url(../imagenes/licuadora.jpg) ; sirve para agregarle un fondo a la pagina*/
+    /*font-size: 90%;*/
+}
+h1{
+    font-size: 36px;
+    text-align: center;
+}
+p{
+    font-size: 16px;
+    font-style: italic;
+}
+h2{
+    font-size: 24px;
+    color: blue;
+}
+h3{
+    text-decoration: underline;
+    color: rgb(69, 86, 240);
+}
+.producto span{
+    color: rgb(0, 128, 100);
+}
+.producto img{
+    height: 130px;
+}
+input[type=text], input[type=tel], input[type=mail], input[type=date], select, textarea{
+    margin-bottom: 15px;
+    border: 1px solid red;
+    border-radius: 10px;
+    width: 100%;
+    height: 25px;
+}
+nav ul{
+    list-style-type: none; /*Le saca la viñeta a las listas*/
+    margin: 0px;
+    padding: 14px 0px; /*Relleno interno arriba y abajo de 14 y en los laterales de 0*/
+}
+nav li{
+    display: inline; /*pondra el texto de la barra de navegacion uno al lado del otro*/
+}
+nav{
+    display: block; /*muestra el elto como un bloque*/
+    text-align: center;/*centra el contenido horizontalmente*/
+    background-color: rgb(218, 10, 10); /*pone el fondo en rojo*/
+}
+nav a{
+    text-decoration: none;/*se saca la decoracion subrayada de los enlaces*/
+    color: white; /*establece el color de texto en blanco*/
+    padding: 0px 50px; /*se agrega espacio interno (relleno) entrer las letrasa y el borde*/
+}
+nav a:hover{ /*Estilos para los enlaces dentro de la barra de navegacion*/
+    text-decoration: none; /*no aplica subrayado al pasar el mouse sobre el enlace, se pone underline para que se subraye*/
+    color: darkred; /*cambia el color del texto a rojo*/
+    background-color: yellow; /*cambia el color del fondo a amarillo*/
+    font-weight: bold; /*Establece el texto en negrita*/
+}
+main{ /*Establece el margen de 20 en la parte superior y de 10% los costados*/
+    margin: 20px 10%;
+}
+input[type=checkbox], input[type=radio]{
+    margin-bottom: 15px; /*se agrega un margen de 15px para que no se vean juntos los botones*/
+}
+button{
+    border: 1px solid red; /*define un borde de 1px y de color rojo*/
+    border-radius: 8px; /*aplica un  radio de borde de 8px para redondear*/
+    background-color: rgb(218, 10, 10); /*establece el color de fondo del boton*/
+    color: white;
+    margin: auto; /*se centra el boton*/
+    display: block; /*boton como un bloque ocupado*/
+    font-size: 14px; /*tamaño de la fuente*/
+    padding: 8px 20px; /*se agrega espacio de relleno*/
+}
+button:hover{
+    color: rgb(218, 10, 10);
+    background-color: white;
+    cursor: pointer; /*cambia el cursor del mouse a una mano
+    cursor: help;
+    cursor: move;
+    cursor: crosshair;
+    cursor: text; son diferentes estilos para el cursor*/
+}
+textarea{ /*establece el tamaño del cuadro de texto*/
+    height: 100px; /*le da una altura de 100px*/
+}
+.producto{
+    background-color: #eee; /*color de fondo de los cuadros de los productos*/
+    width: 280px; /*ancho de los cuadros*/
+    display: inline-block; /*indicamos que los cuadros funcionen como bloques*/
+    padding: 15px; /*relleno interno de 15px*/
+    border-radius: 8px; /*borde redondeado a los cuadros de los productos*/
+    margin: 10px;
+}
+#textarea{
+    resize:none;
+}
+.producto h3{
+    text-align: center; /*centra el titulo*/
+}
+.producto img{
+    height: 150px; /*altura de 150px para todas las imagenes*/
+    display: block; /*centramos la imagen dentro del contenedor*/
+    margin: auto; /*margenes automaticos*/
+}
+.bloque-video{
+    background-color: #eee;
+    border-radius: 8px;
+    padding: 20px;
+}
+.link{ /*estilos para los enlaces link*/
+    text-decoration: none; /*quitamos la decoracion de subrayado*/
+}
+.link:hover{
+    text-decoration: underline;
+}
+footer i{
+    font-size: 35px;
+    border: 1px solid;
+    height: 48px;
+    width: 58px;
+    text-align: center;
+    padding: 10px 0 0 0;
+    border-radius: 80px;
+    margin: 15px;
+    color: red;
+}
