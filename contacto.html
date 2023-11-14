@@ -23,8 +23,8 @@
     <h1>CONTACTO</h1>
     
     <form action="" method="post">
-        <div><!--Se ponen entre div para que q uede uno abajo del otro-->
-            <!--Nombre-->
+        <div>
+            <!--NOMBRE-->
             <label for="txtNombre">Nombre: *</label>
             <input type="text" id="txtNombre" name="txtNombre" required>
         </div>
@@ -39,40 +39,19 @@
             <input type="tel" id="txtTelefono" name="txtTelefono" placeholder="+542995111445" required>
         </div>
         <div>
-            <!--Fecha de Nacimiento-->
-            <label for="txtDate">Fecha de nacimiento: </label>
-            <input type="date" id="txtFechaNac" name="txtFechaNac">
-        </div>
-        <div><!--Para hacer un boton desplegable con opciones-->
-            <label for="istPais">Pais de Origen</label>
-            <select name="istPais" id="istPais"><!--Lo que se va a seleccionar-->
-                <option disabled selected>Seleccionar</option>
-                <option value="1">Argentina</option>
-                <option value="2">Chile</option>
-                <option value="3">Colombia</option>
-                <option value="4">Peru</option>
-                <option value="5">Venezuela</option>
-                <option value="6">Mexico</option>
-                <option value="7">Brasil</option>
-                <option value="8">Estados Unidos</option>
-                <option value="9">Canada</option>
-                <option value="10">Inglaterra</option>
-            </select>
-        </div>
-        <div>
             <label for="istAsunto">Asunto:</label>
             <select name="istAsunto" id="istAsunto">
                 <option disabled selected>Seleccionar</option>
                 <option value="Ventas">Ventas</option>
                 <option value="Informacion">Informacion</option>
-                <option value="Webmasater">Soporte</option>
+                <option value="Cotizaciones">Cotizaciones</option>
             </select>
         </div>
         <div>
             <label for="txtMensaje">Mensaje: *</label>
             <!--textarea es para agregar un mensaje, que puede tener varios renglones-->
             <textarea name="txtMensaje" id="textarea" placeholder ="Escriba aqui su mensaje" required></textarea>
-        </div><!--con el placeholder lo que hace es que al momento de escribir el usuario se borre el mensaje-->
+        </div>
         <div><!--Casilla de checkbox, se pone primero el input para que la 
               cajita de check aparezca antes que la etiqueta-->
             <input type="checkbox" name="chkNewsletter" id="chkNewsletter">
@@ -82,16 +61,6 @@
             <input type="checkbox" name="chkCondiciones" id="chkCondiciones" checked>
             <!--El checked final lo que hace es ponerle el tilde por defecto-->
             <label for="chkCondiciones">Acepto terminos y condiciones</label>
-        </div>
-        <div class="opciones">
-            <!--para indicar que debe elegir una opcion o la otra se hace a traves del mismo NAME
-            indicando con eso que todo pertenece al mismo grupo de informacion-->
-            <label>Sos mayor de edad?</label>
-            <label for="optMayorSi">Si</label>
-            <input type="radio" name="optMayorEdad" id="optMayorSi">
-            <label for="optMayorNo">No</label>
-            <input type="radio" name="optMayorEdad" id="optMayorNo">
-            <!--Si el NAME es distinto nos permitiria elegir las dos opciones-->
         </div>
         <div>
             <!--submit lo que hace es enviar al servidor todos los datos que se completaron-->
