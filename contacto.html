@@ -1,21 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=>, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <nav>
-           <a href="index.html">INICIO</a>  <!--es para crear hipervinculo(boton)-->
-           <a href="nosotros.html">NOSOTROS</a>
-           <a href="buscador.html">BUSCADOR</a>
-           <a href="cotiza.html">COTIZACION</a>
-           <a href="financiacion.html">FINANCIACION</a>
-           <a href="contacto.html">CONTACTO</a>
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: red;">
+            <div class="container-fluid" >
+              <a class="navbar-brand" href="#">ITS Motors</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      OPERACIONES
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">COTIZACION</a></li>
+                      <li><a class="dropdown-item" href="./financiacion.html">FINANCIACION</a></li>
+                      <!--<li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#producto">VEHICULOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contacto.html">CONTACTANOS</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </nav>
     </header>
     <main>
@@ -23,8 +49,8 @@
     <h1>CONTACTO</h1>
     
     <form action="" method="post">
-        <div><!--Se ponen entre div para que q uede uno abajo del otro-->
-            <!--Nombre-->
+        <div>
+            <!--NOMBRE-->
             <label for="txtNombre">Nombre: *</label>
             <input type="text" id="txtNombre" name="txtNombre" required>
         </div>
@@ -39,40 +65,19 @@
             <input type="tel" id="txtTelefono" name="txtTelefono" placeholder="+542995111445" required>
         </div>
         <div>
-            <!--Fecha de Nacimiento-->
-            <label for="txtDate">Fecha de nacimiento: </label>
-            <input type="date" id="txtFechaNac" name="txtFechaNac">
-        </div>
-        <div><!--Para hacer un boton desplegable con opciones-->
-            <label for="istPais">Pais de Origen</label>
-            <select name="istPais" id="istPais"><!--Lo que se va a seleccionar-->
-                <option disabled selected>Seleccionar</option>
-                <option value="1">Argentina</option>
-                <option value="2">Chile</option>
-                <option value="3">Colombia</option>
-                <option value="4">Peru</option>
-                <option value="5">Venezuela</option>
-                <option value="6">Mexico</option>
-                <option value="7">Brasil</option>
-                <option value="8">Estados Unidos</option>
-                <option value="9">Canada</option>
-                <option value="10">Inglaterra</option>
-            </select>
-        </div>
-        <div>
             <label for="istAsunto">Asunto:</label>
             <select name="istAsunto" id="istAsunto">
                 <option disabled selected>Seleccionar</option>
                 <option value="Ventas">Ventas</option>
                 <option value="Informacion">Informacion</option>
-                <option value="Webmasater">Soporte</option>
+                <option value="Cotizaciones">Cotizaciones</option>
             </select>
         </div>
         <div>
             <label for="txtMensaje">Mensaje: *</label>
             <!--textarea es para agregar un mensaje, que puede tener varios renglones-->
             <textarea name="txtMensaje" id="textarea" placeholder ="Escriba aqui su mensaje" required></textarea>
-        </div><!--con el placeholder lo que hace es que al momento de escribir el usuario se borre el mensaje-->
+        </div>
         <div><!--Casilla de checkbox, se pone primero el input para que la 
               cajita de check aparezca antes que la etiqueta-->
             <input type="checkbox" name="chkNewsletter" id="chkNewsletter">
@@ -82,16 +87,6 @@
             <input type="checkbox" name="chkCondiciones" id="chkCondiciones" checked>
             <!--El checked final lo que hace es ponerle el tilde por defecto-->
             <label for="chkCondiciones">Acepto terminos y condiciones</label>
-        </div>
-        <div class="opciones">
-            <!--para indicar que debe elegir una opcion o la otra se hace a traves del mismo NAME
-            indicando con eso que todo pertenece al mismo grupo de informacion-->
-            <label>Sos mayor de edad?</label>
-            <label for="optMayorSi">Si</label>
-            <input type="radio" name="optMayorEdad" id="optMayorSi">
-            <label for="optMayorNo">No</label>
-            <input type="radio" name="optMayorEdad" id="optMayorNo">
-            <!--Si el NAME es distinto nos permitiria elegir las dos opciones-->
         </div>
         <div>
             <!--submit lo que hace es enviar al servidor todos los datos que se completaron-->
