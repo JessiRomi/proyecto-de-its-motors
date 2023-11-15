@@ -1,83 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Electro</title>
-    <link rel="stylesheet" href="css/estilos.css"> <!--es la que nos va a vincular con la carpeta de estilos-->
-    <link rel="stylesheet" href="css/fontawesome-free-6.4.0-web/css/all.min.css"><!--para darle el estilo a los iconos-->
-    <link rel="stylesheet" href="css/fontawesome-free-6.4.0-web/css/fontawesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/estilos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>ITS Motors</title>
 </head>
 <body>
-    <!--Para comentar-->
-    <header>
-    <nav> <!--nav es para hacer una barra de navegacion-->
-        <a href="index.html">INICIO</a>  <!--es para crear hipervinculo(boton)-->
-        <a href="nosotros.html">NOSOTROS</a>
-        <a href="buscador.html">BUSCADOR</a>
-        <a href="cotiza.html">COTIZACION</a>
-        <a href="financiacion.html">FINANCIACION</a>
-        <a href="contacto.html">CONTACTO</a>
-    </nav>
-    </header>
-    <main>
-    <h1>Tienda Electro</h1>
-    <h2>Acerca de la tienda</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-       Excepturi ipsum optio dolorum necessitatibus, inventore, at reiciendis possimus explicabo
-       veniam quam eos mollitia. Autem iste quisquam magni pariatur quod architecto quos.</p>
-    <h2 id="catalogo">Catalogo</h2>
-    <div class="producto"> <!--es para modificar como se va a ver el producto-->
-        <h3>Licuadora Peabody</h3>
-        <img src="imagenes/licuadora.jpg" alt="Licuadora Peabody">
-        <ul> <!--es una lista sin orden-->
-            <li><span>Precio:</span> $45000</li>
-            <li><span>Modelo:</span> KLAP</li>
-            <li><span>Marca:</span> Peabody</li>
-        </ul>
-    </div><!--separa un grupo de elementos-->
-    <div class="producto">
-        <h3>Plancha Oster</h3>
-        <!--<img src="imagenes/plancha.jpg" alt="Plancha Oster" height="200" width="200">-->
-        <img src="imagenes/plancha.jpg" alt="Plancha Oster">
-        <ul>
-            <li><span>Precio:</span> $15000</li><!--la etiqueta span modifica solo la linea-->
-            <li><span>Modelo:</span>UXLS</li>
-            <li><span>Marca:</span> Oster</li>
-        </ul>
-    </div>
-    <div class="producto">
-        <h3>Tostadora Phillips</h3>
-        <!--<img src="imagenes/tostadora.jpg" alt="Tostadora Philips" height="200" width="250">-->
-        <img src="imagenes/tostadora.jpg" alt="Tostadora Philips">
-        <ul>
-            <li><span>Precio:</span> $25000</li>
-            <li><span>Modelo:</span> PEOQ</li>
-            <li><span>Marca:</span> Phillips</li>
-        </ul>
-    </div>
-    <div class="bloque-video">
-        <h2>Video promocional</h2>
-        <iframe width="713" height="401" src="https://www.youtube.com/embed/v6wDu-6t6Gk" 
-        title="KHEA, Tiago PZK - PARA AMARTE A TI (Official Video)" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
-        web-share" allowfullscreen></iframe>
-        <!--para insertar un video se copia el codigo de insercion desde youtube, con el boton derecho-->
-    </div>
-    <!--
-    <a href="#catalogo" class="link">IR AL CATALOGO</a>  esto es para armar botones abajo del todo
-    <a href="mailto:la23euge77@gmail.com">Eugenia Mora correo</a>
-    <a href="tel:2995111445">COMUNICATE</a>
-    -->
-    </main>
-  
-    <footer> <!--se buscan los iconos en fontawesome-->
-        <div>
-            <a href="http://wwww.youtube.com" target="_blank" title="Hola"><i class="fa-sharp fa-solid fa-house"></i></a> 
-            <!--el _blank indica que la pagina se va a abrir en una pestaña nueva-->
-            <a href="https://wa.me/542995111445" target="_blank" title="WA"><i class="fa-sharp fa-solid fa-comment"></i></a>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: red;">
+      <div class="container-fluid" >
+        <a class="navbar-brand" href="#">ITS Motors</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                OPERACIONES
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">COTIZACION</a></li>
+                <li><a class="dropdown-item" href="#">FINANCIACION</a></li>
+                <!--<li><a class="dropdown-item" href="#">Something else here</a></li>-->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#producto">VEHICULOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACTANOS</a>
+            </li>
+          </ul>
         </div>
-    </footer>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="./img/logo.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">ITS Motors</h1>
+          <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" style="background-color: red;">Contactanos</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="about-us">
+      <h1>NOSOTROS</h1>
+      <div class="accordion justify-content-center" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              HISTORIA
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p><strong>ITS Motors S.A. es una empresa Argentina nacida en Abril de 2020.</strong> Nuestra propuesta comercial está compuesta de los siguientes servicios: 
+              <br>Vehículos nuevos. <br> Vehículos usados multimarca. <br>
+              Contamos con un excelente grupo de profesionales que te ofrecerán el mejor servicio y atención en cada una de tus visitas a nuestra sucursal. 
+              Nuestro fiel compromiso con la comunidad nos hace reconocidos en el Alto Valle de Rio Negro y Neuquen. Te invitamos a formar parte de la familia ITS Motors S.A. 
+              conociendo todos los productos que tenemos para ofrecerte.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              MISION
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p><strong>Nuestra mision</strong>  es generar en nuestros clientes el más alto nivel de satisfacción, brindando confianza, respaldo y 
+                la más amplia gama de servicios, con precios y planes a medida. Mediante un clima amigable y cordial lograr preferencia
+                 por parte de nuestros clientes, resolviendo todas las necesidades relacionadas con el automóvil.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              VISION
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p><strong>Tenemos como Visión</strong>   convertirnos en líder del mercado nacional, logrando un desarrollo y crecimiento sostenido a través 
+                de nuestro compromiso y el de todos nuestros colaboradores, maximizando la rentabilidad de la Empresa y asegurando el 
+                bienestar de las personas que trabajan en ella.
+            
+                Son nuestros Valores el diálogo y el respeto mútuo. Tomando como base los lineamientos de la buena fe, la ética, la moral 
+                y las buenas costumbres, brindamos a cada cliente e integrante de la organización, la seguridad, el bienestar y la contención 
+                que cada uno se merece.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="productos-container">
+      <h1>Nuestros Productos</h1>
+      <div class="productos-cards">
+
+        <!--Primer Producto-->
+        <div class="card" style="width: 18rem;">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/D_NQ_NP_617369-MLA70919169014_082023-O.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/D_NQ_NP_656532-MLA70919168998_082023-O.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/D_NQ_NP_719060-MLA70919169004_082023-O.webp" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Producto Prueba</h5>
+            <p class="card-text">Descripcion breve</p>
+            <a href="#" class="btn btn-danger">Ver mas</a>
+          </div>
+        </div>
+        <!--Segundo Producto-->
+
+        <div class="card" style="width: 18rem;">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/D_NQ_NP_617369-MLA70919169014_082023-O.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/D_NQ_NP_656532-MLA70919168998_082023-O.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/D_NQ_NP_719060-MLA70919169004_082023-O.webp" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Producto Prueba</h5>
+            <p class="card-text">Descripcion breve</p>
+            <a href="#" class="btn btn-danger">Ver mas</a>
+          </div>
+        </div>
+
+        <!--Tercer Producto-->
+        <div class="card" style="width: 18rem;">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/D_NQ_NP_617369-MLA70919169014_082023-O.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/D_NQ_NP_656532-MLA70919168998_082023-O.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/D_NQ_NP_719060-MLA70919169004_082023-O.webp" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Producto Prueba</h5>
+            <p class="card-text">Descripcion breve</p>
+            <a href="#" class="btn btn-danger">Ver mas</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>
