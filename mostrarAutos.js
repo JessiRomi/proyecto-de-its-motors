@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="modal-body">
                             <div id="carouselModal" class="carousel slide">
                                 <div class="carousel-indicators">
-                                    ${auto.galeria.map((_, index) => `<button type="button" data-target="#carouselModal" data-slide-to="${index}" ${index === 0 ? 'class="active"' : ''}></button>`).join('')}
+                                    ${auto.galeria.map((_, index) => `<button type="button" data-target="#carousel${index}" data-slide-to="${index}" ${index === 0 ? 'class="active"' : ''}></button>`).join('')}
                                 </div>
                                 <div class="carousel-inner">
                                     ${auto.galeria.map((imagen, index) => `<div class="carousel-item ${index === 0 ? 'active' : ''}"><img src="${imagen}" class="d-block w-100" alt="..."></div>`).join('')}

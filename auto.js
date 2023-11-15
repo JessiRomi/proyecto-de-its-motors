@@ -148,10 +148,10 @@ const auto9 = new Auto('volkswagen', 'Gold Trend', '5 puertas', 'rojo', imagenes
 
 //Construimos volkswagen Suran
 const imagenesAuto10 = [
-    './Imagenes/vg/vg01.webp',
-    './Imagenes/vg/vg02.webp',
-    './Imagenes/vg/vg03.webp',
-    './Imagenes/vg/vg04.webp',
+    './Imagenes/vs/vs01.webp',
+    './Imagenes/vs/vs02.webp',
+    './Imagenes/vs/vs03.webp',
+    './Imagenes/vs/vs04.webp',
 ];
 const auto10 = new Auto('volkswagen', 'Suran', '5 puertas', 'gris', imagenesAuto10, '90.000 km', '1.6', 'hatchback', '2018');
 
