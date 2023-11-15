@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;  
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;  
+}
+
+
+body {
+    background-color: aquamarine;
+    line-height: 1.6;
+    color:black;
+}
+
+h1{
+    text-align: center;
+}
+
+header {
+    background-color:#f71515;
+    padding: 10px 0;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario estilos */
+form {
+    background-image: url(../img/logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-gap: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 3px solid #f60a0a;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border:#f71515;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(211, 100%, 35%);
+    
+}
+
+/* Checkbox estilos */
+input[type="checkbox"] {
+    margin-right: 5px;
+    border-radius: 20px;
+}
+
+/* Mensajes de validación */
+input:required:invalid,
+select:required:invalid,
+textarea:required:invalid {
+    border-color:solid #f60a0a;
+}
+
+/* Cambiar estilos para elementos seleccionados */
+input[type="checkbox"]:checked + label {
+    font-weight: bold;
+    border-radius: 20px;
+}
