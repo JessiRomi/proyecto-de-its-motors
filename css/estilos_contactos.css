@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;  
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color:rgba(179, 179, 179,0.7);
+    line-height: 1.6;
+    color:black;
+}
+
+h1{
+    text-align: center;
+}
+
+header {
+    background-color:#f71515;
+    padding: 10px 0;
+}
+.navbar{
+    color: white;
+}
+
+.nav-link, .navbar-brand{
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav {
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario estilos */
+form {
+    background-image: url(../img/logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 480px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #f60a0a;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border:#f71515;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    width: 100px;
+    margin: 10px auto;
+}
+
+button:hover {
+    background-color: hsl(211, 100%, 35%);
+    
+}
+
+/* Checkbox estilos */
+input[type="checkbox"] {
+    margin-right: 5px;
+    border-radius: 20px;
+    height: 15px;
+}
+
+/* Mensajes de validación */
+input:required:invalid,
+select:required:invalid,
+textarea:required:invalid {
+    border-color:solid #f60a0a;
+}
+
+.container_check{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.check{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+/* Cambiar estilos para elementos seleccionados */
+input[type="checkbox"]:checked + label {
+    font-weight: bold;
+    border-radius: 20px;
+}
