@@ -158,3 +158,4 @@ const auto10 = new Auto('volkswagen', 'Suran', '5 puertas', 'gris', imagenesAuto
 const BDAuto = [
     auto1,auto2,auto3,auto4,auto5,auto6,auto7,auto8,auto9,auto10
 ]
+
