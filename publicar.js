@@ -1,5 +1,3 @@
-// publicar.js
-
 // Función para crear un carrusel
 function createCarousel(auto) {
     const carouselId = `carousel-${auto.marca}-${auto.modelo}`;
@@ -7,7 +5,7 @@ function createCarousel(auto) {
 
     // Crea el elemento del carrusel
     const carousel = document.createElement('div');
-    carousel.classList.add('carousel', 'slide', 'mb-3'); // Añadida clase 'mb-3' para margen inferior
+    carousel.classList.add('carousel', 'slide', 'mb-3');
     carousel.id = carouselId;
 
     // Crea los indicadores del carrusel
@@ -38,10 +36,22 @@ function createCarousel(auto) {
 
         const img = document.createElement('img');
         img.src = imagen;
-        img.classList.add('d-block', 'w-100');
+        img.classList.add('d-block', 'w-100', 'carousel-image');
+        img.style.cursor = 'pointer';
+
         item.appendChild(img);
 
         inner.appendChild(item);
+
+        // Agrega un evento click para mostrar la imagen ampliada al hacer clic en ella
+        img.addEventListener('click', function () {
+            showImageInPopup(imagen);
+        });
+
+        item.appendChild(img);
+
+        inner.appendChild(item);
+
     });
 
     // Agrega los botones de control del carrusel
@@ -94,8 +104,7 @@ function createCarousel(auto) {
 function generateCarousels() {
     const productosContainer = document.querySelector('.productos-container .productos-cards');
 
-    BDAuto.forEach((auto, index) => {
-        // Ajusta la clase 'col-md-4' a 'col-md-3' o 'col-md-2' según tus preferencias
+    BDAuto.forEach((auto) => {
         const colClass = 'col-md-3';
 
         // Crea la tarjeta del producto
@@ -115,23 +124,19 @@ function generateCarousels() {
 
         const description = document.createElement('p');
         description.classList.add('card-text');
-        description.textContent = 'Descripcion breve';
 
         const link = document.createElement('a');
-        link.href = '#'; // Usaremos "#" como un marcador de posición
+        link.href = '#';
         link.classList.add('btn', 'btn-danger');
         link.textContent = 'Ver mas';
 
-        // Asigna un identificador único al botón "Ver más" usando el índice
-        link.id = `verMasBtn${index}`;
-
-        // Añade un evento de clic al botón "Ver más" para abrir el modal
-        link.addEventListener('click', () => openModal(auto, index));
+        // Agrega un evento de clic al enlace "Ver más"
+        link.addEventListener('click', () => showCarDetails(auto));
 
         // Agrega todos los elementos a la tarjeta
         cardBody.appendChild(title);
         cardBody.appendChild(description);
-        cardBody.appendChild(link);
+        cardBody.appendChild(link); 
 
         card.appendChild(carousel);
         card.appendChild(cardBody);
@@ -140,19 +145,118 @@ function generateCarousels() {
         productosContainer.appendChild(card);
     });
 }
+// Función para mostrar los detalles del auto
+function showCarDetails(auto) {
+    const modalContent = `
+        <div>
+            <h2>${auto.marca} ${auto.modelo}</h2>
+            <p><strong>Cantidad de puertas:</strong> ${auto.cant_puertas}</p>
+            <p><strong>Color:</strong> ${auto.color}</p>
+            <p><strong>Año:</strong> ${auto.anio}</p>
+            <p><strong>Kilometraje:</strong> ${auto.km}</p>
+            <p><strong>Motor:</strong> ${auto.motor}</p>
+            <p><strong>Carrocería:</strong> ${auto.carroceria}</p>
+        </div>
+        <button onclick="window.close()" style="margin-top: 20px; padding: 10px; background-color: red; color: white; border: none; cursor: pointer;">Cerrar</button>
+    `;
 
-function openModal(auto, index) {
-    // Identificador único del modal
-    const modalId = `modalAuto${index}`;
+    const popupWindow = window.open('', '_blank', 'width=400,height=400');
 
-    // Crea el modal
-    const modalElement = new bootstrap.Modal(document.getElementById(modalId), {
-        keyboard: false,
-        backdrop: 'static' // Evita que el modal se cierre al hacer clic fuera de él
-    });
+    popupWindow.document.write(`
+        <html>
+            <head>
+                <title>${auto.marca} ${auto.modelo}</title>
+                <style>
+                    body {
+                        font-family: 'Quicksand', sans-serif;
+                        padding: 20px;
+                        background-color: #f8f9fa;
+                    }
 
-    // Muestra el modal
-    modalElement.show();
+                    h2 {
+                        text-decoration: underline;
+                        font-size: 24px;
+                    }
+
+                    p {
+                        margin-bottom: 10px;
+                    }
+
+                    button {
+                        margin-top: 20px;
+                        padding: 10px;
+                        background-color: #dc3545;
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background-color: #c82333;
+                    }
+                </style>
+            </head>
+            <body>
+                ${modalContent}
+            </body>
+        </html>
+    `);
+    popupWindow.focus();
+}
+
+// Función para mostrar la imagen actual del carrusel en una ventana
+function showImageInPopup(imageSrc) {
+    const imageContent = `
+    <div style="text-align: center;">
+    <img src="${imageSrc}" style="max-width: 100%; max-height: 100%; display: block; margin: auto;">
+    <button onclick="window.close()" style="margin-top: 20px; padding: 10px; background-color: red; color: white; border: none; cursor: pointer;">Cerrar</button>
+</div>
+    `;
+
+    const popupWindow = window.open('', '_blank', 'width=600,height=600');
+
+    popupWindow.document.write(`
+        <html>
+            <head>
+                <title>Imagen Ampliada</title>
+                <style>
+                    body {
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        background-color: #f8f9fa;
+                    }
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        display: block;
+                        margin: auto;
+                    }
+
+                    button {
+                        margin-top: 20px;
+                        padding: 10px;
+                        background-color: #dc3545;
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background-color: #c82333;
+                    }
+                </style>
+            </head>
+            <body>
+                ${imageContent}
+            </body>
+        </html>
+    `);
+
+    popupWindow.focus();
 }
 
 // Llama a la función para generar los carruseles al cargar la página
