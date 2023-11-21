@@ -1,0 +1,70 @@
+/*Para comentar se usa esto*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;  
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: inherit;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+body {
+    background-color:rgba(179, 179, 179,0.7);
+    line-height: 1.6;
+    color:black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    color: white;
+}
+
+.about-us h1{
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 42px;
+}
+
+.productos-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+.productos-container h1{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 42px;
+}
+
+.productos-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    
+}
+/*ajustes para que los carruseles tengan el mismo tamaño*/
+
+.carousel-image {
+    height: 200px; 
+    object-fit: cover;
+}
+
+.carousel {
+    max-width: 400px; 
+    margin: 0 auto; 
+}
+
