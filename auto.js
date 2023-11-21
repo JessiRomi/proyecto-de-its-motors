@@ -78,9 +78,9 @@ const imagenesAuto2 = [
     './Imagenes/cc5/cc504.webp',
 ];
 
-const auto2 = new Auto('Citroen', 'C5 Aircross', '5 puertas', 'blanco', imagenesAuto2, '50.000 km', '1.6', 'hatchback', '2018');
+const auto2 = new Auto('Citroen', 'C5_Aircross', '5 puertas', 'blanco', imagenesAuto2, '50.000 km', '1.6', 'hatchback', '2018');
 
-//Construimos Chebrolet S10
+//Construimos Chevrolet S10
 const imagenesAuto3 = [
     './Imagenes/cs10/cs1001.webp',
     './Imagenes/cs10/cs1002.webp',
@@ -88,7 +88,7 @@ const imagenesAuto3 = [
     './Imagenes/cs10/cs1004.webp',
     './Imagenes/cs10/cs1005.webp',
 ];
-const auto3 = new Auto('Chebrolet', 'S10', '4 puertas', 'verde', imagenesAuto3, '90.000 km', '1.6', 'hatchback', '2018');
+const auto3 = new Auto('Chevrolet', 'S10', '4 puertas', 'verde', imagenesAuto3, '90.000 km', '1.6', 'hatchback', '2018');
 
 //Construimos Fiat 500
 const imagenesAuto4 = [
@@ -113,7 +113,7 @@ const imagenesAuto6 = [
     './Imagenes/pp/pp01.webp',
     './Imagenes/pp/pp02.webp',
 ];
-const auto6 = new Auto('Jeep', 'Patriot', '5 puertas', 'gris', imagenesAuto6, '90.000 km', '1.6', 'hatchback', '2018');
+const auto6 = new Auto('Peugeot', 'Partner', '3 puertas', 'gris', imagenesAuto6, '90.000 km', '1.6', 'hatchback', '2018');
 
 //Constrimos Renault Sandero
 const imagenesAuto7 = [
@@ -144,7 +144,7 @@ const imagenesAuto9 = [
     './Imagenes/vg/vg03.webp',
     './Imagenes/vg/vg04.webp',
 ];
-const auto9 = new Auto('volkswagen', 'Gold Trend', '5 puertas', 'rojo', imagenesAuto9, '90.000 km', '1.6', 'hatchback', '2018');
+const auto9 = new Auto('volkswagen', 'Gold_Trend', '5 puertas', 'rojo', imagenesAuto9, '90.000 km', '1.6', 'hatchback', '2018');
 
 //Construimos volkswagen Suran
 const imagenesAuto10 = [
@@ -158,4 +158,3 @@ const auto10 = new Auto('volkswagen', 'Suran', '5 puertas', 'gris', imagenesAuto
 const BDAuto = [
     auto1,auto2,auto3,auto4,auto5,auto6,auto7,auto8,auto9,auto10
 ]
-
