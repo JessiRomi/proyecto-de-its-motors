@@ -88,4 +88,18 @@ html {
     max-width: 400px; 
     margin: 0 auto; 
 }
+.whatsapp-icon {
+    position: fixed;
+    position:sticky;
+    bottom: 100px;
+    right: 20px;
+    
+}
+
+.whatsapp-icon img {
+    width: 60px; /* Ajusta el tamaño*/
+    height: auto;
+    border-radius: 50%; /* Da un aspecto redondeado al icono */
+    
+}
 
