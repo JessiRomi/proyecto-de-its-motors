@@ -92,7 +92,7 @@ html {
 .whatsapp-icon {
     position:sticky;
     bottom: 100px;
-    left: 90%;
+    left: 95%;
     display:inline-block;
 }
 
@@ -100,6 +100,50 @@ html {
     width: 60px; /* Ajusta el tamaño*/
     height: auto;
     border-radius: 50%; /* Da un aspecto redondeado al icono */
-    
-}
+    }
 
+   /* Estilos generales para el footer donde se encuenta para contactarnos */
+footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  
+  .pie_de_pagina {
+    text-align: center;
+  }
+  
+  /* logo en el pie de página */
+  .pie_de_pagina img {
+    width: 200px; 
+    height: auto;
+  }
+  
+  /* Estilos para la sección de "REDES SOCIALES" */
+  .pie_de_pagina h4 {
+    margin-bottom: 10px;
+  }
+  
+  .pie_de_pagina a {
+    margin-right: 10px;
+  }
+  
+  .pie_de_pagina a img {
+    width: 30px; 
+    height: auto;
+  }
+  
+  /* Estilos para la sección "NOS ENCONTRAS EN" */
+  .pie_de_pagina h5 {
+    margin-bottom: 10px;
+  }
+  
+  .pie_de_pagina p img {
+    width: 20px; 
+    height: auto;
+    margin-right: 5px;
+  } 
