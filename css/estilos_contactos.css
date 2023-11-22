@@ -16,9 +16,7 @@ body {
     color:black;
 }
 
-h1{
-    text-align: center;
-}
+
 
 header {
     background-color:#f71515;
@@ -38,17 +36,32 @@ nav {
     text-align: center;
 }
 
-main {
-    max-width: 800px;
-    margin: 100px auto;
-    padding: 20px;
-    border-radius: 30px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+
 }
 
-/* Formulario estilos */
-form {
+.contact-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 90px 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 60px 80px;
+    border-radius: 30px;
+}
+
+.contact-form h1{
+    text-align: center;
+}
+
+/*Formulario estilos */
+.formulario-contacto {
     background-image: url(../img/logo.jpg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -56,11 +69,10 @@ form {
     flex-direction: column;
 }
 
-label {
+.contacto-label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    width: 480px;
 }
 
 input,
@@ -161,13 +173,13 @@ input[type="checkbox"]{
     width: 100px;
 }
 
-/* Cambiar estilos para elementos seleccionados */
+Cambiar estilos para elementos seleccionados 
 input[type="checkbox"]:checked + label {
     font-weight: bold;
     border-radius: 20px;
 }
 
-/*Cambia los estilos del scriptFinanciacion al momento de llevar el texto al html*/
+Cambia los estilos del scriptFinanciacion al momento de llevar el texto al html
 #imprimir{    
     font-weight: normal;
     font-size: 25px;
