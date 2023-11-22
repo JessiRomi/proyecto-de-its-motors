@@ -88,11 +88,12 @@ html {
     max-width: 400px; 
     margin: 0 auto; 
 }
+
 .whatsapp-icon {
     position:sticky;
     bottom: 100px;
-    right: 20px;
-    
+    left: 90%;
+    display:inline-block;
 }
 
 .whatsapp-icon img {
