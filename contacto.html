@@ -44,63 +44,64 @@
         </nav>
     </header>
     <main>
+      <div class="contact-form">
+        <h1>CONTACTO</h1>
+        <form action="" method="post">
+            <div>
+                <!--NOMBRE-->
+            <div>
+                <!--NOMBRE-->
+                <label for="txtNombre">Nombre: *</label>
+                <input type="text" id="txtNombre" name="txtNombre" required>
+            </div>
+            <div>
+                <!--Correo-->
+                <label for="txtCorreo">Correo: *</label>
+                <input type="mail" id="txtCorreo" name="txtCorreo" required>
+            </div>
+            <div>
+                <!--Telefono-->
+                <label for="txtTelefono">Teléfono: *</label>
+                <input type="tel" id="txtTelefono" name="txtTelefono" placeholder="+542995111445" required>
+            </div>
+            <div>
+                <label for="istAsunto">Asunto:</label>
+                <select name="istAsunto" id="istAsunto">
+                    <option disabled selected>Seleccionar</option>
+                    <option value="Ventas">Ventas</option>
+                    <option value="Informacion">Informacion</option>
+                    <option value="Cotizaciones">Cotizaciones</option>
+                    <option value="Cotizaciones">Cotizaciones</option>
+                </select>
+            </div>
+            <div>
+                <label for="txtMensaje">Mensaje: *</label>
+                <!--textarea es para agregar un mensaje, que puede tener varios renglones-->
+                <textarea name="txtMensaje" id="textarea" placeholder ="Escriba aqui su mensaje" required></textarea>
+            </div>
+            </div>
+            <div><!--Casilla de checkbox, se pone primero el input para que la 
+                  cajita de check aparezca antes que la etiqueta-->
+                <input type="checkbox" name="chkNewsletter" id="chkNewsletter">
+                <label for="chkNewsletter">Deseo recibir novedades</label>
+                
+                
+            </div>
+            <div>
+                <label for="chkCondiciones">Acepto terminos y condiciones</label>
+                <input type="checkbox" name="chkCondiciones" id="chkCondiciones" checked>
+                <!--El checked final lo que hace es ponerle el tilde por defecto-->
+                
+            </div>
+          
+            <div>
+                <!--submit lo que hace es enviar al servidor todos los datos que se completaron-->
+                <button type="submit" id="btnEnviar" name="btnEnviar">ENVIAR</button>
+            </div>
+        </form>
+      </div>
     
-    <h1>CONTACTO</h1>
     
-    <form action="" method="post">
-        <div>
-            <!--NOMBRE-->
-        <div>
-            <!--NOMBRE-->
-            <label for="txtNombre">Nombre: *</label>
-            <input type="text" id="txtNombre" name="txtNombre" required>
-        </div>
-        <div>
-            <!--Correo-->
-            <label for="txtCorreo">Correo: *</label>
-            <input type="mail" id="txtCorreo" name="txtCorreo" required>
-        </div>
-        <div>
-            <!--Telefono-->
-            <label for="txtTelefono">Teléfono: *</label>
-            <input type="tel" id="txtTelefono" name="txtTelefono" placeholder="+542995111445" required>
-        </div>
-        <div>
-            <label for="istAsunto">Asunto:</label>
-            <select name="istAsunto" id="istAsunto">
-                <option disabled selected>Seleccionar</option>
-                <option value="Ventas">Ventas</option>
-                <option value="Informacion">Informacion</option>
-                <option value="Cotizaciones">Cotizaciones</option>
-                <option value="Cotizaciones">Cotizaciones</option>
-            </select>
-        </div>
-        <div>
-            <label for="txtMensaje">Mensaje: *</label>
-            <!--textarea es para agregar un mensaje, que puede tener varios renglones-->
-            <textarea name="txtMensaje" id="textarea" placeholder ="Escriba aqui su mensaje" required></textarea>
-        </div>
-        </div>
-        <div><!--Casilla de checkbox, se pone primero el input para que la 
-              cajita de check aparezca antes que la etiqueta-->
-            <input type="checkbox" name="chkNewsletter" id="chkNewsletter">
-            <label for="chkNewsletter">Deseo recibir novedades</label>
-            
-            
-        </div>
-        <div>
-            <label for="chkCondiciones">Acepto terminos y condiciones</label>
-            <label for="chkCondiciones">Acepto terminos y condiciones</label>
-            <input type="checkbox" name="chkCondiciones" id="chkCondiciones" checked>
-            <!--El checked final lo que hace es ponerle el tilde por defecto-->
-            
-        </div>
-      
-        <div>
-            <!--submit lo que hace es enviar al servidor todos los datos que se completaron-->
-            <button type="submit" id="btnEnviar" name="btnEnviar">ENVIAR</button>
-        </div>
-    </form>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
