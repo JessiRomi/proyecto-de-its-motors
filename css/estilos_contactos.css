@@ -88,6 +88,47 @@ button {
     display: block;
     width: 100px;
     margin: 10px auto;
+/* Formulario estilos */
+form {
+    background-image: url(../img/logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 480px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #f60a0a;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border:#f71515;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    width: 100px;
+    margin: 10px auto;
 }
 
 button:hover {
@@ -109,6 +150,7 @@ textarea:required:invalid {
     border-color:solid #f60a0a;
 }
 
+.container_check{
 .container_check{
     display: flex;
     flex-direction: column;
