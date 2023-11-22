@@ -37,11 +37,11 @@ function aceptar(){
                              }
                              break;
         }
-        imprimir.innerHTML +=`
-        <p>EL MONTO SOLICITADO ES $ ${monto}<br>
-        EN EL BANCO ${banco}<br>
-        EN ${cuota} CUOTAS<br>
-        EL MONTO DE LA CUOTA SERA DE $ ${montoCuota}</p> `;
+        imprimir.innerHTML +=`----------------------------------
+        <p>EL MONTO SOLICITADO ES $ <strong>${monto}</strong><br>
+        EN EL BANCO <strong>${banco}</strong><br>
+        EN <strong>${cuota}</strong> CUOTAS<br>
+        EL MONTO DE LA CUOTA SERA DE $ <strong>${montoCuota}</strong></p> `;
         
     }
     else{
