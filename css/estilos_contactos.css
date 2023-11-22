@@ -168,3 +168,15 @@ input[type="checkbox"]:checked + label {
     font-weight: bold;
     border-radius: 20px;
 }
+
+/*Cambia los estilos del scriptFinanciacion al momento de llevar el texto al html*/
+#imprimir{    
+    font-weight: normal;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+}
+
+strong{
+    color: #f60a0a;
+}
