@@ -87,7 +87,8 @@ button {
     cursor: pointer;
     display: block;
     width: 100px;
-    margin: 10px auto;
+    margin: 10px auto;}
+    
 /* Formulario estilos */
 form {
     background-image: url(../img/logo.jpg);
@@ -150,7 +151,6 @@ textarea:required:invalid {
     border-color:solid #f60a0a;
 }
 
-.container_check{
 .container_check{
     display: flex;
     flex-direction: column;
