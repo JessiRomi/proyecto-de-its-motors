@@ -89,7 +89,6 @@ html {
     margin: 0 auto; 
 }
 .whatsapp-icon {
-    position: fixed;
     position:sticky;
     bottom: 100px;
     right: 20px;
