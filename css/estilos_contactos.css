@@ -99,10 +99,10 @@ form {
 }
 
 label {
-    display: block;
+    display: inline-block;
     margin-bottom: 5px;
     font-weight: bold;
-    width: 480px;
+    width: 250px;
 }
 
 input,
@@ -157,10 +157,8 @@ textarea:required:invalid {
     align-items: start;
 }
 
-.check{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
+input[type="checkbox"]{
+    width: 100px;
 }
 
 /* Cambiar estilos para elementos seleccionados */

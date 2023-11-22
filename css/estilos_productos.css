@@ -25,6 +25,11 @@ html {
 .navbar{
     color: white;
 }
+.nav-link, .navbar-brand{
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
 
 .about-us h1{
     text-decoration: underline;
